@@ -38,7 +38,7 @@ public class Profile {
             if(match) {
                 score += criterion.getWeight().getValue();
             }
-            anyMatches |= match;
+            anyMatches = anyMatches | match;
         }
         if (kill) {
             return false;
