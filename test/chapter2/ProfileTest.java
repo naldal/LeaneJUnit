@@ -6,14 +6,13 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class ProfileTest {
+    private Profile profile;
+    private BooleanQuestion question;
+    private Criteria criteria;
 
     public ProfileTest() {
         System.out.println("Test instance has created");
     }
-
-    private Profile profile;
-    private BooleanQuestion question;
-    private Criteria criteria;
 
     @Before
     public void create() {
