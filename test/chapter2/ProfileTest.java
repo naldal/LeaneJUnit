@@ -25,9 +25,7 @@ public class ProfileTest {
     @Test
     public void matchAnswersFalseWhenMustMatchCriteriaNotMet() {
         profile.add(new Answer(question, Bool.FALSE));
-        Criterion criterion = new Criterion(new Answer(question, Bool.TRUE), Weight.MustMatch);
-        criteria.add(criterion);
-
+        criteria.add(new Criterion(new Answer(question, Bool.TRUE), Weight.MustMatch));
         boolean matches = profile.matchers(criteria);
 
         assertFalse(matches);
